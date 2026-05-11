@@ -50,5 +50,6 @@ jobs:
 
       - name: Build PHP assets
         run: |
+          composer install --no-interaction --prefer-dist --optimize-autoloader
           cp .env.example .env
           php artisan key:generate --force -n
